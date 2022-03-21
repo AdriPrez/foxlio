@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootswatch/dist/sketchy/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/sketchy/bootswatch";
+
+.font{
+  font-family: 'Kranky', cursive;
+}
+
+
+
+body {
+padding: 20em;
+  background-image: url("./assets/imagenes/28552558.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+
+}
