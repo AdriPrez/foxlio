@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BackgraundsComponent } from './components/backgraunds/backgraunds.component';
 import { AvatarinfoComponent } from './components/avatarinfo/avatarinfo.component';
 import { SkillComponent } from './components/skill/skill.component';
+import { ProgressComponent } from './components/progress/progress.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SkillComponent } from './components/skill/skill.component';
     BackgraundsComponent,
     AvatarinfoComponent,
     SkillComponent,
+    ProgressComponent,
   ],
   imports: [
     BrowserModule,
