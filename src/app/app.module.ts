@@ -12,6 +12,11 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditarComponent } from './components/editar/editar.component';
+import { LoginComponent } from './components/login/login.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { EditarComponent } from './components/editar/editar.component';
     ProgressComponent,
     EducacionComponent,
     EditarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
