@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-3fd9c": {
+      "hosting": {
+        "angularapi": [
+          "login-3fd9c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-3fd9c"
+  }
+}

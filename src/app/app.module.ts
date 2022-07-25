@@ -9,14 +9,19 @@ import { AvatarinfoComponent } from './components/avatarinfo/avatarinfo.componen
 import { SkillComponent } from './components/skill/skill.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-
-import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HomeComponent } from './home/home.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { LoginComponent } from './components/login/login.component';
 
+//routing//
+import { HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+//firebase//
 
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavbarbelowComponent } from './components/navbarbelow/navbarbelow.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import {environment} from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,27 +34,22 @@ import { LoginComponent } from './components/login/login.component';
     EducacionComponent,
     EditarComponent,
     LoginComponent,
+
+    HomeComponent,
+      NavbarbelowComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({
-      "radius": 60,
-      "space": -10,
-      "outerStrokeGradient": true,
-      "outerStrokeWidth": 10,
-      "outerStrokeColor": "#4882c2",
-      "outerStrokeGradientStopColor": "#ff9500",
-      "innerStrokeColor": "#e7e8ea",
-      "innerStrokeWidth": 10,
-      "title": "UI",
-      "animateTitle": false,
-      "animationDuration": 1000,
-      "showUnits": false,
-      "showBackground": false,
-      "clockwise": false,
-      "startFromZero": false,
-      "lazy": false})
+    HttpClientModule,
+    ReactiveFormsModule,
+    //firebase//
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
+    //firebase//
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
