@@ -18,13 +18,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  entrar(){
-    console.log(this.usuario);
-  }
 
 
 
-  Entrar() {
+
+  entrar() {
    console.log(this.usuario);
    const{email,password} = this.usuario;
    this.authService.login(email,password).then(res =>{
