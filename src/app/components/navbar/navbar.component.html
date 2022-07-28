@@ -9,6 +9,16 @@
 
 
 
+    <nav class="navbar fixed-top navbar-warning alert-danger font " *ngIf="userLogeed|async as user" href="#" >
+      <img class="img program img-fluid mx-4" src="https://pbs.twimg.com/media/FMu65hhXMAA-S6H?format=png&name=900x900" width="200px" height="200px"  >
+        <a class="navbar-brand"    ></a>
+        <form class="d-flex" >
+        <button type="button"    class=" btn btn-outline-success font  me-5" data-bs-toggle="modal" [routerLink]="['LoginComponent']" data-bs-target="#loginModal">
+          {{user.email}}
+        </button>
+
+
+
 
 
   </form>

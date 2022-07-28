@@ -1,6 +1,5 @@
 
 
-
 <div class="form-group  row modal fade" id="loginModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" >
   <div class="modal-dialog text-center "></div>
   <div class="container  pt-4">
@@ -8,41 +7,45 @@
     <div class="col-lg-6 offset-lg-3">
 
 
-  <div class="card border-danger mb-3" style="max-width: 40rem;">
+  <div class="card border-danger bg-dark mb-3" style="max-width: 40rem;">
     <div class="form-group font text-center">
 
-      <label for="exampleInputEmail1" class="form-label  mt-4">Email</label>
+      <label  class="form-label  mt-4">
+        <p class="h5">  Email </p>
+      </label>
 
-      <input type="text" [(ngModel)]="usuario.email" class="form-control"   class="form-control"  aria-describedby="emailHelp" placeholder="ingrese su email">
+      <input type="text" [(ngModel)]="usuario.email" class="form-control"     aria-describedby="emailHelp" placeholder="ingrese su email">
 
     </div>
     <div class="form-group font text-center">
-      <label for="exampleInputPassword1" class="form-label mt-4" >contraseña</label>
+      <label  class="form-label mt-4" >
+        <p class="h5">  contraseña </p>
+      </label>
 
       <input type="password" [(ngModel)]="usuario.password" class="form-control "  placeholder="ingrese su contraseña">
 
       <div class="mt-4"></div>
-    <button  class="btn btn-outline-danger" data-bs-dismiss="modal" >Cancelar</button>
-    <button class="btn btn-outline-danger" (click)="entrar()">Entrar</button>
+    <button  class="btn btn-outline-danger" data-bs-dismiss="modal" >
+      Cancelar
+    </button>
+    <button class="btn btn-outline-danger"  data-bs-dismiss="modal" (click)="entrar()">
+      Entrar
+    </button>
+
+    <div class="mt-4  font">
+      <p class="h5"> Para longear por favor ingrese: </p>
+      <div class="mt-4  font"></div>
+      <p class="h5">  Email: admini@gmail.com</p>
+      <div class="mt-4  font"></div>
+      <p class="h5"> contraseña: 123456</p>
     <div class="mt-4"></div>
-    </div>
+  </div>
 
-    <div class=" form-group font text-center">
-
-
-
-
-      <button class="btn btn-outline-danger" (click)="logout()"  >Desloguear</button>
-
-      <div class="mt-4"></div>
-
-    </div >
-
+  </div>
+    <button  class=" btn d-grid  gap-2 col-6 mx-auto font btn-outline-info " data-bs-dismiss="modal" (click)="logout()" >Salir</button>
+    <div class="mt-4"></div>
     </div>
   </div>
   </div>
   </div>
       </div>
-
-
-
