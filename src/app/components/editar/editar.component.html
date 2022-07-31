@@ -2,7 +2,7 @@
 <div class="modal fade " id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
   <div class="modal-dialog "></div>
   <!--modal -->
-  <form [formGroup]="form" (ngSubmit)="creardato">
+  <form [formGroup]="form" (ngSubmit)="creardato()">
     <div class="container  pt-4">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
@@ -25,10 +25,11 @@
         </div></h4>
         <div class="font pt-4"> -->
 
+              <input type="hidden" [(ngModel)]="post.id"/>
 
               <div class="input-group font mb-3">
                 <span class="input-group-text "></span>
-                <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo">
+                <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo"  [(ngModel)]="post.titulo">
               </div>
 
               <p class="h4">Informacion</p>
@@ -40,7 +41,7 @@
 
             <div class="input-group font mb-3">
               <span class="input-group-text "></span>
-              <input type="text" class="form-control" placeholder="Informacion" formControlName="informacion">
+              <input type="text" class="form-control" placeholder="Informacion" formControlName="informacion"  [(ngModel)]="post.informacion">
             </div>
 
             <div class="pt-4">
