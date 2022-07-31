@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackgraundsComponent } from './backgraunds.component';
+import { CrearDataComponent } from './crear-data.component';
 
-describe('BackgraundsComponent', () => {
-  let component: BackgraundsComponent;
-  let fixture: ComponentFixture<BackgraundsComponent>;
+describe('CrearDataComponent', () => {
+  let component: CrearDataComponent;
+  let fixture: ComponentFixture<CrearDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackgraundsComponent ]
+      declarations: [ CrearDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BackgraundsComponent);
+    fixture = TestBed.createComponent(CrearDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,28 +1,31 @@
-
-<div class="container font marketing">
+<section class="py-5 text-center container mt-3">
+  <div class="row py-lg-5">
+<div class="container font marketing" >
 
 <hr class="featurette-divider ">
-
+<section class="py-5 text-center container mt-3"></section>
         <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <p class="featurette-heading font  lead  " >Adriana Vanesa Perez </p>
-            <p class="lead font ">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="row featurette ">
+          <div class="col-md-7 align-self-center order-md-2">
+            <p class="featurette-heading font text-center lead display-6 ">   Adriana Vanesa Perez </p>
+            <p class="lead font ">  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
           <!--boton editar-->
-          <button
-          type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-          data-bs-toggle="modal" data-bs-target="#exampleModal" >
+          <button *ngIf="userLogeed|async as user"
+          type="button" class="font btn btn-sm btn-outline-secondary"
+          data-bs-toggle="modal" data-bs-target="#exampleModal "  >
             Edit
           </button>
           </div>
           <div class="col-md-5  order-md-1">
             <img class="featurette-image img-fluid mx-auto end-2" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="./assets/imagenes/65cx4dd.png">
             <!--boton editar-->
-            <button type="button" class="font btn btn-sm btn-outline-secondary"  routerLink="/EditarComponent"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="font btn btn-sm btn-outline-secondary" *ngIf="userLogeed|async as user"
+            data-bs-toggle="modal" data-bs-target="#exampleModal" >
               Edit
             </button>
-
 
           </div>
         </div>
       </div>
+    </div>
+

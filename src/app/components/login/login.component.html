@@ -25,10 +25,11 @@
       <input type="password" [(ngModel)]="usuario.password" class="form-control "  placeholder="ingrese su contraseña">
 
       <div class="mt-4"></div>
-    <button  class="btn btn-outline-danger" data-bs-dismiss="modal" >
+    <button   class=" btn d-grid  gap-2 col-6 mx-auto font btn-outline-secondary text-secondary" data-bs-dismiss="modal" >
       Cancelar
     </button>
-    <button class="btn btn-outline-danger"  data-bs-dismiss="modal" (click)="entrar()">
+    <div class="mt-3"></div>
+    <button  class=" btn d-grid  gap-2 col-6 mx-auto font btn-outline-success text-success"  data-bs-dismiss="modal" (click)="entrar()">
       Entrar
     </button>
 
@@ -42,7 +43,7 @@
   </div>
 
   </div>
-    <button  class=" btn d-grid  gap-2 col-6 mx-auto font btn-outline-info " data-bs-dismiss="modal" (click)="logout()" >Salir</button>
+    <button  class=" btn d-grid text-info gap-2 col-6 mx-auto font btn-outline-info " data-bs-dismiss="modal" (click)="logout()" >Salir</button>
     <div class="mt-4"></div>
     </div>
   </div>
