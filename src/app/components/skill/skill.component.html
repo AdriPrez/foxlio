@@ -16,7 +16,7 @@
       </p>
       <!--boton editar-->
       <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
         Edit
       </button>
     </div>
@@ -38,7 +38,7 @@
       </p>
       <!--boton editar-->
       <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
         Edit
       </button>
     </div>
@@ -57,7 +57,7 @@
       </p>
       <!--boton editar-->
       <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
         Edit
       </button>
     </div>

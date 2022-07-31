@@ -12,9 +12,13 @@ export class LoginComponent implements OnInit {
   usuario={
 
     email: '',
-    password: ''
+    password: '',
 
   }
+
+  ngOnInit(): void {
+  }
+
 
   constructor(private authService: AuthService) { }
 
@@ -23,35 +27,21 @@ export class LoginComponent implements OnInit {
 
 
   entrar() {
-   console.log(this.usuario);
-   const{email,password} = this.usuario;
-   this.authService.login(email,password).then(res =>{
-    console.log("se registro",res);
-   }
-
-   )
-
+    const { email, password } = this.usuario;
+    this.authService.login(email, password).then(user => {
+      console.log("Bienvenido ", user);
+      if(!user) {
+        alert("Datos incorrectos, si no tenes cuenta registrate!");
+        return;
+      };
+    })
   }
 
 
-
-
-
-
-  logout(){
-
-  this.authService.logout();
-
- }
-
-
-
-
-  ngOnInit(): void {
+  logout() {
+    this.authService.logout();
   }
-
 
 
 }
-
 

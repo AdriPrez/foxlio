@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BackgraundsComponent } from './components/backgraunds/backgraunds.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './home/home.component';

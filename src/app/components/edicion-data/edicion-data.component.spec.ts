@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarbelowComponent } from './navbarbelow.component';
+import { EdicionDataComponent } from './edicion-data.component';
 
-describe('NavbarbelowComponent', () => {
-  let component: NavbarbelowComponent;
-  let fixture: ComponentFixture<NavbarbelowComponent>;
+describe('EdicionDataComponent', () => {
+  let component: EdicionDataComponent;
+  let fixture: ComponentFixture<EdicionDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarbelowComponent ]
+      declarations: [ EdicionDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarbelowComponent);
+    fixture = TestBed.createComponent(EdicionDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
