@@ -30,6 +30,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { CreateComponent } from './components/create/create.component';
+import { EditComponent } from './components/edit/edit.component';
+
 
 
 @NgModule({
@@ -43,8 +46,8 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     EditarComponent,
     LoginComponent,
     HomeComponent,
-
-
+    CreateComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
