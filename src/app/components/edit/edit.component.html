@@ -1,0 +1,26 @@
+<div class="form-group  row modal fade" id="EditComponentModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" >
+  <div class="modal-dialog "></div>
+  <form  >
+    <div class="container  pt-4" [formGroup]="editForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="card  border-secondary text-center mb-3" style="max-width: 40rem;">
+            <div class="card font">
+                <div class="mt-3 "> </div>
+                <label class="form-label"class="h4 ">Editar</label>
+              </div>
+              <div class="card ">
+                <div class="input-group font mb-3">
+                  <input formControlName="title" type="text" class="form-control" required>
+                </div>
+                <p class="h4 font">Informacion</p>
+              </div>
+              <div class="input-group font mb-3">
+                <input formControlName="content" type="text" class="form-control" required>
+              </div>
+              <button  class=" btn d-grid text-success gap-2 col-6 mx-auto font btn-outline-success " type="submit" data-bs-dismiss="modal"  >Aceptar</button>
+              <br>
+              <button  class=" btn d-grid text-danger gap-2 col-6 mx-auto font btn-outline-danger " data-bs-dismiss="modal"  >Salir</button>
+              <br>
+  </div>
+  </div>

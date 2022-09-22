@@ -1,18 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { Post } from 'src/app/post.model';
+import { PostService } from 'src/app/services/post.service';
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.scss']
 })
 export class EducacionComponent implements OnInit {
-
+  Posts: Post[]
 
   userLogeed=this.authService.getUserLogged();
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService,private postService: PostService) {}
 
 
   ngOnInit(): void {
+    console.log(this.postService.getPosts())
+    this.postService.getPosts().subscribe((res) => {
+      this.Posts = res.map((e) => {
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data() as Post)
+        };
+      });
+      console.log(this.Posts)
+    });
   }
-
+  deleteInfo = (post) => this.postService.deletePost(post);
 }

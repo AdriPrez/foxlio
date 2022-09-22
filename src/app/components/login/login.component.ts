@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class  LoginComponent implements OnInit {
 
   usuario={
 
@@ -18,14 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
   constructor(private authService: AuthService) { }
-
-
-
-
-
   entrar() {
     const { email, password } = this.usuario;
     this.authService.login(email, password).then(user => {
@@ -36,7 +29,6 @@ export class LoginComponent implements OnInit {
       };
     })
   }
-
 
   logout() {
     this.authService.logout();

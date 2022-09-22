@@ -2,15 +2,16 @@
   <div class="row py-lg-5">
 <div class="container font marketing" >
 
-<hr class="featurette-divider ">
-<section class="py-5 text-center container mt-3"></section>
+
         <div class="row featurette">
-        <div class="row featurette ">
           <div class="col-md-7 align-self-center order-md-2">
-            <p class="featurette-heading font text-center lead display-6 ">
+            <div *ngFor="let post of Posts" >
+            <p class="featurette-heading font text-center lead display-6 "  >
                Adriana Vanesa Perez
+
                <br>
                </p>
+               <td>{{ post.title }}</td>
             <p class="lead font ">
 
               Hola :)
@@ -27,6 +28,11 @@ Me interesa mucho el dibujo y el moldeado 3d, uno de mis anhelos es tener un emp
 Durante la cuarentena encontré lo bello del pixel art y los juegos, ya comenze a dar los primeros pasas para aprender en esas ramas.
 
 </p>
+<td>{{ post.content }}</td>
+</div>
+
+
+
           <!--boton editar-->
           <button *ngIf="userLogeed|async as user"
           type="button" class="font btn btn-sm btn-outline-secondary"
