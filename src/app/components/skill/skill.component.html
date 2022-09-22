@@ -1,9 +1,16 @@
+
+
+    <div class="row card-body card border-danger mb-3 card-text text-info font "  *ngIf="userLogeed|async as user">
+      <button class=" btn d-grid  gap-2 col-6 mx-auto font btn-outline-success text-secondary btn btn-outline-success" data-bs-toggle="modal" type="submit" [routerLink]="['CreateComponent']" data-bs-target="#CreateComponentModal">
+        Crear</button>
+    </div>
+
 <!--proyectos-->
 
 <div class="container marketing">
   <hr class="featurette-divider" />
 
-  <div class="row featurette">
+  <div class="row featurette"*ngFor="let post of Posts">
     <div class="col-md-7 order-md-2">
       <span class="featurette-heading h4 font">
         Proyectos
@@ -21,6 +28,10 @@
       <div class="col-md-5  order-md-1">
       <img class="featurette-image img-fluid mx-auto end-2" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src=".\assets\imagenes\foxón.png">
     </div>
+
+
+
+
       <!--boton editar-->
       <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
       data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
@@ -29,46 +40,7 @@
     </div>
   </div>
 </div>
-<!--
-<div class="container marketing">
-  <hr class="featurette-divider" />
-  <div class="row featurette">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading font">
-        Oh yeah, it's that good.
-        <span class="text-muted">See for yourself.</span>
-      </h2>
-      <p class="lead font">
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula
-        porta felis euismod semper. Praesent commodo cursus magna, vel
-        scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      </p>
-      boton editar
-      <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-      data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
-        Edit
-      </button>
-    </div>
-  </div>
 
-  <div class="row featurette">
-    <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading font">
-        Oh yeah, it's that good.
-        <span class="text-muted">See for yourself.</span>
-      </h2>
-      <p class="lead font">
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula
-        porta felis euismod semper. Praesent commodo cursus magna, vel
-        scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      </p>
-      boton editar
-      <button type="button" class="font btn btn-sm btn-outline-secondary" routerLink="/EditarComponent"
-      data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="userLogeed|async as user">
-        Edit
-      </button>
-    </div>
-  </div>-->
 
 
 

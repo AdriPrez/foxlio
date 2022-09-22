@@ -33,6 +33,9 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
 import { CreateComponent } from './components/create/create.component';
 import { EditComponent } from './components/edit/edit.component';
 
+//op
+import * as firebase from "firebase/app"
+var localFire = !firebase.getApps.length ? firebase.initializeApp(environment.firebaseConfig) : firebase.getApp();
 
 
 @NgModule({
@@ -60,10 +63,9 @@ import { EditComponent } from './components/edit/edit.component';
     //firebase//
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirebaseApp(() => localFire),
     provideFirestore(() => getFirestore())
     //firebase//
-
 
   ],
   providers: [],

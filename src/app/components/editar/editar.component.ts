@@ -11,6 +11,7 @@ export class EditarComponent implements OnInit {
   Posts: Post[]
   constructor(private postService: PostService) {}
  ngOnInit(): void {
+  console.log(this.postService.getPosts())
    this.postService.getPosts().subscribe((res) => {
      this.Posts = res.map((e) => {
        return {
@@ -18,8 +19,8 @@ export class EditarComponent implements OnInit {
          ...(e.payload.doc.data() as Post)
        };
      });
-
+     console.log(this.Posts)
    });
  }
- deleteInfo = (post) => this.postService.deletePost(post);
+ deleteInfo = (Posts) => this.postService.deletePost(Posts);
 }
